@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Task4.Models.Studentdetails>
+
+@{
+    ViewBag.Title = "Student Index";
+}
+
+<h2>Student View</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Rollnumber
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Standard
+        </th>
+        <th>
+            UserName
+        </th>
+        <th>
+            Password
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var d in TempData["students"] as List<Task4.Models.Studentdetails>)
+    {
+        <tr>
+            <td>
+                @d.StuRoll
+            </td>
+            <td>
+                @d.StuName
+            </td>
+            <td>
+                @d.StuStd
+            </td>
+            <td>
+                @ViewBag.U
+            </td>
+            <td>
+                @ViewBag.P
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
